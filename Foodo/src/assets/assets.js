@@ -16,6 +16,10 @@ import Corndogs from './Corndogs.jpg'
 import kottu from './kottu.jpg'
 import friedRice from './fried rice.jpg'
 import RatingStar from './rating_star.png'
+import Add from './add.png'
+import Remove from './cancel.png'
+import AddGreen from './add_green.png'
+import All from './All.png'
 
 export const assets = {
     Muffins,
@@ -35,10 +39,18 @@ export const assets = {
     Corndogs,
     kottu,
     friedRice,
-    RatingStar
+    RatingStar,
+    Add,
+    Remove,
+    AddGreen,
+    All
 }
 
 export const menu_list =[
+    {
+        menu_name: "All",
+        menu_img: All
+    },
     {
         menu_name: "Muffins",
         menu_img : Muffins
