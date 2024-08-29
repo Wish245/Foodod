@@ -20,6 +20,11 @@ import Add from './add.png'
 import Remove from './cancel.png'
 import AddGreen from './add_green.png'
 import All from './All.png'
+import Facebook from './facebook.png'
+import Instagram from './instagram.png'
+import Twitter from './twitter.png'
+import GooglePlay from './Googlrplay.png'
+import AppStore from './AppStore.png'
 
 export const assets = {
     Muffins,
@@ -43,7 +48,12 @@ export const assets = {
     Add,
     Remove,
     AddGreen,
-    All
+    All,
+    Facebook,
+    Instagram,
+    Twitter,
+    GooglePlay,
+    AppStore
 }
 
 export const menu_list =[
