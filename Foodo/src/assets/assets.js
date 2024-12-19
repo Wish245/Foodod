@@ -25,6 +25,7 @@ import Instagram from './instagram.png'
 import Twitter from './twitter.png'
 import GooglePlay from './Googlrplay.png'
 import AppStore from './AppStore.png'
+import Cross from './cross_icon.png'
 
 export const assets = {
     Muffins,
@@ -53,7 +54,8 @@ export const assets = {
     Instagram,
     Twitter,
     GooglePlay,
-    AppStore
+    AppStore,
+    Cross,
 }
 
 export const menu_list =[

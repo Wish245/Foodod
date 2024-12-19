@@ -1,25 +1,44 @@
 import React, {useState} from 'react'
 import './NavBar.css'
 import { assets } from '../../assets/assets'
-const NavBar = () => {
+import {Link} from 'react-router-dom';
+
+const NavBar = ({setShowLogin}) => {
 
     const [menu, setMenu] = useState("home");
   return (
     <div className='navBar'>
-        <img src={assets.logo} alt="" className='logo'/>
+        <Link to='/'><img src={assets.logo} alt="" className='logo'/></Link>
         <ul className="navbar-menu">
-            <li onClick={()=>setMenu("home")} className={menu=="home"?"active":""}>Home</li>
-            <li onClick={()=>setMenu("menu")} className={menu=="menu"?"active":""}>Menu</li>
-            <li onClick={()=>setMenu("mobile-app")} className={menu=="mobile-app"?"active":""}>Mobile App</li>
-            <li onClick={()=>setMenu("contact-us")} className={menu=="contact-us"?"active":""}>Contact Us</li>
-        </ul>
+  <li>
+    <Link to="/" onClick={() => setMenu("home")} className={menu === "home" ? "active" : ""}>
+      Home
+    </Link>
+  </li>
+  <li>
+    <a href="#explore-menu" onClick={() => setMenu("menu")} className={menu === "menu" ? "active" : ""}>
+      Menu
+    </a>
+  </li>
+  <li>
+    <a href="#app-download" onClick={() => setMenu("mobile-app")} className={menu === "mobile-app" ? "active" : ""}>
+      Mobile App
+    </a>
+  </li>
+  <li>
+    <a href="#footer" onClick={() => setMenu("contact-us")} className={menu === "contact-us" ? "active" : ""}>
+      Contact Us
+    </a>
+  </li>
+</ul>
+
         <div className="navbar-right">
             <img src= {assets.search} alt="" className='navbar-search'/>
             <div className="navbar-search-icon">
-                <img src= {assets.shoppingBasket} alt=""  className='navbar-search'/>
+                <Link to='/cart'><img src= {assets.shoppingBasket} alt=""  className='navbar-search'/></Link>
                 <div className="dot"></div>
             </div>
-            <button>sign in</button>
+            <button onClick={()=>setShowLogin(true)}>sign in</button>
         </div>
     </div>
   )
